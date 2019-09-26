@@ -12,7 +12,7 @@
     <artifactId>bigtoolbox-os</artifactId>
     <name>Big Tool Box: OS</name>
     <packaging>jar</packaging>
-    <version>1.0.95</version>
+    <version>1.0.96</version>
     <description>The OS module of bigtoolbox</description>
     <url>https://github.com/IncPlusPlus/bigtoolbox-os</url>
 
