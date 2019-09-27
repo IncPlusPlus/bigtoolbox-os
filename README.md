@@ -2,3 +2,4 @@
 [![codebeat badge](https://codebeat.co/badges/22a00715-a3a2-46e2-9053-bbe56a3af569)](https://codebeat.co/projects/github-com-incplusplus-bigtoolbox-os-master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c71e1194835054a5419c/maintainability)](https://codeclimate.com/github/IncPlusPlus/bigtoolbox-os/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c71e1194835054a5419c/test_coverage)](https://codeclimate.com/github/IncPlusPlus/bigtoolbox-os/test_coverage)
+[![Known Vulnerabilities](https://snyk.io//test/github/IncPlusPlus/bigtoolbox-os/badge.svg?targetFile=pom.xml)](https://snyk.io//test/github/IncPlusPlus/bigtoolbox-os?targetFile=pom.xml)
