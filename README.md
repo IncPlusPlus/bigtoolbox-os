@@ -6,3 +6,8 @@
 [![Build Status](https://travis-ci.com/IncPlusPlus/bigtoolbox-os.svg?branch=master)](https://travis-ci.com/IncPlusPlus/bigtoolbox-os)
 [![Known Vulnerabilities](https://snyk.io//test/github/IncPlusPlus/bigtoolbox-os/badge.svg?targetFile=pom.xml)](https://snyk.io//test/github/IncPlusPlus/bigtoolbox-os?targetFile=pom.xml)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/IncPlusPlus/bigtoolbox-os.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/IncPlusPlus/bigtoolbox-os/alerts/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os?ref=badge_shield)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os?ref=badge_large)
