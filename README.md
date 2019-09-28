@@ -8,6 +8,8 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/IncPlusPlus/bigtoolbox-os.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/IncPlusPlus/bigtoolbox-os/alerts/)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os?ref=badge_shield)
 
+# What is this?
+This is the OS module of [bigtoolbox](https://github.com/IncPlusPlus/bigtoolbox). This is completely experimental and is still looking for an identity.
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FIncPlusPlus%2Fbigtoolbox-os?ref=badge_large)
