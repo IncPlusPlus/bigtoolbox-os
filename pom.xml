@@ -1,86 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>io.github.incplusplus</groupId>
-        <artifactId>bigtoolbox-parent</artifactId>
-        <version>1.0.102</version>
-<!--        https://stackoverflow.com/a/6006098/1687436-->
-<!--        <relativePath></relativePath>-->
-    </parent>
-    <artifactId>bigtoolbox-os</artifactId>
-    <name>Big Tool Box: OS</name>
-    <packaging>jar</packaging>
-    <version>1.0.98</version>
-    <description>The OS module of bigtoolbox</description>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>io.github.incplusplus</groupId>
+    <artifactId>bigtoolbox-parent</artifactId>
+    <version>1.0.102</version>
+  </parent>
+  <artifactId>bigtoolbox-os</artifactId>
+  <version>1.0.98</version>
+  <packaging>jar</packaging>
+  <name>Big Tool Box: OS</name>
+  <description>The OS module of bigtoolbox</description>
+
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <bintray.repo>incplusplus/main-maven</bintray.repo>
+    <bintray.package>bigtoolbox-os</bintray.package>
+    <bintray.subject>incplusplus</bintray.subject>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+  </build>
+  <url>https://github.com/IncPlusPlus/bigtoolbox-os</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Ryan Cloherty</name>
+      <email>cloherty.ryan@gmail.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/IncPlusPlus/bigtoolbox-os.git</connection>
+    <developerConnection>scm:git:https://github.com/IncPlusPlus/bigtoolbox-os.git</developerConnection>
     <url>https://github.com/IncPlusPlus/bigtoolbox-os</url>
+  </scm>
 
-    <properties>
-        <maven.deploy.skip>true</maven.deploy.skip>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <bintray.repo>incplusplus/main-maven</bintray.repo>
-        <bintray.package>bigtoolbox-os</bintray.package>
-        <bintray.subject>incplusplus</bintray.subject>
-    </properties>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>bintray-incplusplus-main-maven</id>
+      <name>bintray</name>
+      <url>https://dl.bintray.com/incplusplus/main-maven</url>
+    </repository>
+  </repositories>
 
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Ryan Cloherty</name>
-            <email>cloherty.ryan@gmail.com</email>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:https://github.com/IncPlusPlus/bigtoolbox-os.git</connection>
-        <developerConnection>scm:git:https://github.com/IncPlusPlus/bigtoolbox-os.git</developerConnection>
-        <url>https://github.com/IncPlusPlus/bigtoolbox-os</url>
-    </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>main-maven</id>
-            <url>https://api.bintray.com/maven/${bintray.subject}/${bintray.repo}/${bintray.package}/;publish=1</url>
-        </repository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>
-                    false
-                </enabled>
-            </snapshots>
-            <id>
-                bintray-incplusplus-main-maven
-            </id>
-            <name>
-                bintray
-            </name>
-            <url>
-                https://dl.bintray.com/incplusplus/main-maven
-            </url>
-        </repository>
-    </repositories>
-
-    <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
-        </dependency>
-    </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>main-maven</id>
+      <url>https://api.bintray.com/maven/${bintray.subject}/${bintray.repo}/${bintray.package}/;publish=1</url>
+    </repository>
+  </distributionManagement>
 </project>
