@@ -3,6 +3,7 @@
 [![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/IncPlusPlus/bigtoolbox-os.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/IncPlusPlus/bigtoolbox-os/context:java)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c71e1194835054a5419c/maintainability)](https://codeclimate.com/github/IncPlusPlus/bigtoolbox-os/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c71e1194835054a5419c/test_coverage)](https://codeclimate.com/github/IncPlusPlus/bigtoolbox-os/test_coverage)
+[![codecov](https://codecov.io/gh/IncPlusPlus/bigtoolbox-os/branch/master/graph/badge.svg)](https://codecov.io/gh/IncPlusPlus/bigtoolbox-os)
 [![Build Status](https://travis-ci.com/IncPlusPlus/bigtoolbox-os.svg?branch=master)](https://travis-ci.com/IncPlusPlus/bigtoolbox-os)
 [![Known Vulnerabilities](https://snyk.io//test/github/IncPlusPlus/bigtoolbox-os/badge.svg?targetFile=pom.xml)](https://snyk.io//test/github/IncPlusPlus/bigtoolbox-os?targetFile=pom.xml)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/IncPlusPlus/bigtoolbox-os.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/IncPlusPlus/bigtoolbox-os/alerts/)
