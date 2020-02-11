@@ -14,8 +14,7 @@ public abstract class Linux extends OperatingSystem
 			throw new IncorrectOperatingSystemException();
 		}
 	}
-	public static Linux getInstance()
-	{
+	public static Linux getInstance() throws UnsupportedOSException {
 		throw new UnsupportedOSException();
 	}
 }
