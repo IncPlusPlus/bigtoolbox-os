@@ -7,7 +7,7 @@
     <version>1.0.102</version>
   </parent>
   <artifactId>bigtoolbox-os</artifactId>
-  <version>1.0.99</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>Big Tool Box: OS</name>
   <description>The OS module of bigtoolbox</description>
