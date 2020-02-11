@@ -19,8 +19,7 @@ public abstract class Windows extends OperatingSystem
 		version = System.getProperty("os.version");
 	}
 
-	public static OperatingSystem getSkeletonOS(String majorVersion, String minorVersion, String buildVersion)
-	{
+	public static OperatingSystem getSkeletonOS(String majorVersion, String minorVersion, String buildVersion) throws UnsupportedOSException {
 		if(majorVersion.equals("Windows 10"))
 		{
 			return Windows_10.getSkeletonOS(minorVersion,buildVersion);
@@ -34,8 +33,7 @@ public abstract class Windows extends OperatingSystem
 	//	return new Windows_10("312.34123");
 	//}
 
-	public static Windows getInstance()
-	{
+	public static Windows getInstance() throws UnsupportedOSException {
 		if(SystemUtils.IS_OS_WINDOWS_10)
 			return new Windows_10();
 		else throw new UnsupportedOSException();
