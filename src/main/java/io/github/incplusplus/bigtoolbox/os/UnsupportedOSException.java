@@ -1,6 +1,6 @@
 package io.github.incplusplus.bigtoolbox.os;
 
-public class UnsupportedOSException extends RuntimeException
+public class UnsupportedOSException extends Exception
 {
 	private static String cause = "The OS of this system is not supported. \n" +
 			"It could be supported in the future, though. \n" +

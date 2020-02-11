@@ -14,8 +14,7 @@ public abstract class Mac extends OperatingSystem
 			throw new IncorrectOperatingSystemException();
 		}
 	}
-	public static Mac getInstance()
-	{
+	public static Mac getInstance() throws UnsupportedOSException {
 		throw new UnsupportedOSException();
 	}
 }

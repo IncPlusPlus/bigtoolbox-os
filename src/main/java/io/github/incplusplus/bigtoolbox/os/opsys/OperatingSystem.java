@@ -16,8 +16,7 @@ public abstract class OperatingSystem
 		Windows, Linux, Mac
 	}
 
-	public static OSFamily getOSFamily()
-	{
+	public static OSFamily getOSFamily() throws UnsupportedOSException {
 		if(SystemUtils.IS_OS_WINDOWS)
 		{
 			return OSFamily.Windows;
@@ -33,8 +32,7 @@ public abstract class OperatingSystem
 		else{throw new UnsupportedOSException();}
 	}
 
-	public static OperatingSystem getOS()
-	{
+	public static OperatingSystem getOS() throws UnsupportedOSException {
 		if(SystemUtils.IS_OS_WINDOWS)
 		{
 			return Windows.getInstance();
@@ -52,13 +50,11 @@ public abstract class OperatingSystem
 
 	public abstract String getVersion();
 
-	public final OperatingSystem getSkeleton(OSFamily osFamily, String majorVersion, String minorVersion)
-	{
+	public final OperatingSystem getSkeleton(OSFamily osFamily, String majorVersion, String minorVersion) throws UnsupportedOSException {
 		return getSkeleton(osFamily,majorVersion,minorVersion,"");
 	}
 
-	public final OperatingSystem getSkeleton(OSFamily osFamily, String majorVersion, String minorVersion, String buildVersion)
-	{
+	public final OperatingSystem getSkeleton(OSFamily osFamily, String majorVersion, String minorVersion, String buildVersion) throws UnsupportedOSException {
 		if(osFamily.equals(OSFamily.Windows))
 		{
 			return Windows.getSkeletonOS(majorVersion, minorVersion, buildVersion);
