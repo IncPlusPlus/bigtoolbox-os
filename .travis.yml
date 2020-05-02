@@ -1,46 +1,39 @@
 dist: xenial
 language: java
+jdk: openjdk14
 cache:
   directories:
   - "$HOME/.m2/repository"
 env:
 - CLI_VERSION=latest
-matrix:
-  include:
-  - jdk: oraclejdk14
-    # See https://github.com/travis-ci/travis-ci/issues/8667
-    install: true
-    script:
-    - mvn clean jacoco:prepare-agent install jacoco:report
-    after_success:
-    - bash <(curl -s https://codecov.io/bash)
-    deploy:
-    - provider: bintray
-      file: bintray_info_maven.JSON
-      user: incplusplus
-      key: "$bintray_key"
-      skip_cleanup: true
-      on:
-        repo: IncPlusPlus/bigtoolbox-os
-        branch: master
-    - provider: releases
-      api_key:
-        secure: cr4PHxNO88guWtTqk9IooKeBlPA2rLJ+jRUg2dR61Hq2BZ86WJZlywIzsOCHp6VsGm8255uRtPLQseNXzXlT8zno0u82hGhQ/kUAE53rvJ1cYiv6ksxZ+eIAIu4Pvv+V+b3/iDz9m4N8U6FT/5nbD1TOJwREfhYi4yPRmwoP3hlff71gq7N6LIZuH4SzGjdki/hLDFSNrFZmRgSfRCjRbWEHwPwAHcVd5fOrHZ5YEokMZ2aF36qUq/Oto48guZ5K3PGuQiiu1BVUN+njEyCSbvRUM3MIjde6edKxJwwKSGPJokr3+Wo6/WbBRN8ZURJWQ6fmo8Dj6F2Ipy2opRXQT9NeGoVnMLu1oPGAYD7w01uhnyLv1xj2SqEP/HeA+NbekcpTNp38E5hjD78DWREFSTBQV+PbGvTEwxv8B+JHEfvBR//jXWtXOjdb7RHqyxKpTWoT6pyubLR8fxXdF2Q2YyO5lmV+j4O5swR0BD1AoIpRQM8FSUvS7XzqaJM/0FpoqprxDnYL9XsDzc51bKRmeruogtFuFQTj+hUmjlWLt1Dzgmv3ZaTSSCstFoNYZeOZxqDHSIyxRMoH0lmoXJVtE35NJV52aWMeutmjzNqp1cGT29CHYvhrKBz9anTU/1BajLq1MzEPq/PCgYS4WSzNfV8L5aiZ8hlJ/n8jjg/PZv8=
-      file_glob: true
-      file: target/bigtoolbox-os-*.*.*.jar
-      skip_cleanup: true
-      prerelease: true
-      on:
-        repo: IncPlusPlus/bigtoolbox-os
-        branch: master
-        tags: true
-  - jdk: openjdk14
-    # See https://github.com/travis-ci/travis-ci/issues/8667
-    install: true
-    before_script:
-    - 'curl -H ''Cache-Control: no-cache'' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh
-      | sudo bash'
-    script:
-    - mvn clean install
-    - fossa init
-    - fossa analyze
+# See https://github.com/travis-ci/travis-ci/issues/8667
+install: true
+before_script:
+  - 'curl -H ''Cache-Control: no-cache'' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh
+    | sudo bash'
+script:
+- mvn clean jacoco:prepare-agent install jacoco:report
+- fossa init
+- fossa analyze
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+deploy:
+- provider: bintray
+  file: bintray_info_maven.JSON
+  user: incplusplus
+  key: "$bintray_key"
+  skip_cleanup: true
+  on:
+    repo: IncPlusPlus/bigtoolbox-os
+    branch: master
+- provider: releases
+  api_key:
+    secure: cr4PHxNO88guWtTqk9IooKeBlPA2rLJ+jRUg2dR61Hq2BZ86WJZlywIzsOCHp6VsGm8255uRtPLQseNXzXlT8zno0u82hGhQ/kUAE53rvJ1cYiv6ksxZ+eIAIu4Pvv+V+b3/iDz9m4N8U6FT/5nbD1TOJwREfhYi4yPRmwoP3hlff71gq7N6LIZuH4SzGjdki/hLDFSNrFZmRgSfRCjRbWEHwPwAHcVd5fOrHZ5YEokMZ2aF36qUq/Oto48guZ5K3PGuQiiu1BVUN+njEyCSbvRUM3MIjde6edKxJwwKSGPJokr3+Wo6/WbBRN8ZURJWQ6fmo8Dj6F2Ipy2opRXQT9NeGoVnMLu1oPGAYD7w01uhnyLv1xj2SqEP/HeA+NbekcpTNp38E5hjD78DWREFSTBQV+PbGvTEwxv8B+JHEfvBR//jXWtXOjdb7RHqyxKpTWoT6pyubLR8fxXdF2Q2YyO5lmV+j4O5swR0BD1AoIpRQM8FSUvS7XzqaJM/0FpoqprxDnYL9XsDzc51bKRmeruogtFuFQTj+hUmjlWLt1Dzgmv3ZaTSSCstFoNYZeOZxqDHSIyxRMoH0lmoXJVtE35NJV52aWMeutmjzNqp1cGT29CHYvhrKBz9anTU/1BajLq1MzEPq/PCgYS4WSzNfV8L5aiZ8hlJ/n8jjg/PZv8=
+  file_glob: true
+  file: target/bigtoolbox-os-*.*.*.jar
+  skip_cleanup: true
+  prerelease: true
+  on:
+    repo: IncPlusPlus/bigtoolbox-os
+    branch: master
+    tags: true
