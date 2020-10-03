@@ -4,10 +4,10 @@
   <parent>
     <groupId>io.github.incplusplus</groupId>
     <artifactId>bigtoolbox-parent</artifactId>
-    <version>1.0.102</version>
+    <version>1.2.0</version>
   </parent>
   <artifactId>bigtoolbox-os</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <packaging>jar</packaging>
   <name>Big Tool Box: OS</name>
   <description>The OS module of bigtoolbox</description>
@@ -24,7 +24,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.8.1</version>
+      <version>3.11</version>
     </dependency>
   </dependencies>
 
