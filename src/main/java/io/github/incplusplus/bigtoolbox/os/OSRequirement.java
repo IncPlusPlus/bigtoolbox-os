@@ -1,6 +1,4 @@
 package io.github.incplusplus.bigtoolbox.os;
 
-//TODO Implement
-public class OSRequirement
-{
-}
+// TODO Implement
+public class OSRequirement {}
